@@ -5,13 +5,13 @@ task :write, [:title, :category] do |t, args|
   if File.exist? path; raise RuntimeError.new("Won't clobber #{path}"); end
   File.open(path, 'w') do |file|
     file.write <<-EOS
-                ---
-                layout: post
-                category: #{args.category}
-                title: #{args.title}
-                date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
-                ---
-                EOS
+    ---
+    layout: post
+    category: #{args.category}
+    title: #{args.title}
+    date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
+    ---
+    EOS
   end
   puts "Now open #{path} in an editor."
 end
