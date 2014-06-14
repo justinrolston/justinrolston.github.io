@@ -1,17 +1,25 @@
-desc "Given a title as an argument, create a new post file"
-task :write, [:title, :category] do |t, args|
-  filename = "#{Time.now.strftime('%Y-%m-%d')}-#{args.title.gsub(/\s/, '_').downcase}.markdown"
-  path = File.join("_posts", filename)
-  if File.exist? path; raise RuntimeError.new("Won't clobber #{path}"); end
-  File.open(path, 'w') do |file|
-    file.write <<-EOS
-    ---
-    layout: post
-    category: #{args.category}
-    title: #{args.title}
-    date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
-    ---
-    EOS
+require 'rubygems'
+require 'rake'
+require 'fileutils'
+
+desc "Draft a new post"
+task :new do
+  puts "What should we call this post for now?"
+  name = STDIN.gets.chomp
+  FileUtils.touch("drafts/#{name}.md")
+
+  open("drafts/#{name}.md", 'a') do |f|
+    f.puts "---"
+    f.puts "layout: post"
+    f.puts "title: \"DRAFT: #{name}\""
+    f.puts "---"
   end
-  puts "Now open #{path} in an editor."
 end
+
+
+desc "Startup Jekyll"
+task :start do
+  sh "jekyll server"
+end
+
+task :default => :start
