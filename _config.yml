@@ -1,7 +1,8 @@
 # Site settings
 title: Justin's Notes
-email: JustinRolston@gmail.com
-description: "I want to share stuff that I hacked, struggled, and defeated.  I would like give some nuggets of info that would safe other time." 
+email: JustinRolston at gmail
+username: JustinRolston
+description: "I want to share stuff that I hacked, struggled, and defeated.  I would like give some nuggets of info that would safe other time."
 baseurl: ""
 url: "http://JustinRolston.github.io"
 
