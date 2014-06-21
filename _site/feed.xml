@@ -6,5 +6,52 @@
     <link>http://JustinRolston.github.io/</link>
     <atom:link href="http://JustinRolston.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
+      <item>
+        <title>How do I creaet a ruby gem?</title>
+        <description>&lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt;
+&lt;p&gt;Last week, I pulled a file out of my lib directory of a project because I thought that we might try and use it in another project.  I really want to prevent a copy paste situation.  So this led me to think about, how did I do this 8 months ago?&lt;/p&gt;
+
+&lt;h2 id=&quot;before-you-start&quot;&gt;0. Before You Start&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create a RubyGems.org account&lt;/li&gt;
+  &lt;li&gt;Make sure to query the name of your gem, to see if it already exists&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;gem-install-bundler--mou-iconhttpsavatars1githubusercontentcomu1137638s50&quot;&gt;1. gem install bundler  &lt;img src=&quot;https://avatars1.githubusercontent.com/u/1137638?s=50&quot; alt=&quot;Mou icon&quot; /&gt;&lt;/h2&gt;
+&lt;p&gt;Bundler will do most of the heavy lifting.  Pick a name for your gem and run…&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_gem&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now you should have a directory with your gem name and it contains all of the necessary file needed to start your gem.&lt;/p&gt;
+
+&lt;h2 id=&quot;build-time&quot;&gt;2. Build Time&lt;/h2&gt;
+&lt;p&gt;If you run ‘rake -T’ in the terminal, you will see…&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;rake&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# Build my_gem-0.0.1.gem into the pkg directory&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;rake&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Build and install my_gem-0.0.1.gem into system gems&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;rake&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Create tag v0.0.1 and build and push my_gem-0.0.1.gem to Rubygems&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Run these commands:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;rake build #to build your gem&lt;/li&gt;
+  &lt;li&gt;rake install #just to make sure your gem installs without issue&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;release-mygem&quot;&gt;3. Release my_gem&lt;/h2&gt;
+
+&lt;p&gt;When the gem is ready for release to RubyGems.org&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;rake&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;release&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The first time you do this, you will be asked for your RubyGems.org credentials.&lt;/p&gt;
+
+&lt;h2 id=&quot;done&quot;&gt;Done&lt;/h2&gt;
+</description>
+        <pubDate>Sat, 21 Jun 2014 00:00:00 -0400</pubDate>
+        <link>http://JustinRolston.github.io/2014/06/21/how-do-i-create-a-ruby-gem/</link>
+        <guid isPermaLink="true">http://JustinRolston.github.io/2014/06/21/how-do-i-create-a-ruby-gem/</guid>
+      </item>
+    
   </channel>
 </rss>

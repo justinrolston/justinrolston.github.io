@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Justin's Notes</title>
+    <title>How do I creaet a ruby gem?</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="I want to share stuff that I hacked, struggled, and defeated.  I would like give some nuggets of info that would safe other time.">
-    <link rel="canonical" href="http://JustinRolston.github.io/">
+    <link rel="canonical" href="http://JustinRolston.github.io/2014/06/21/how-do-i-create-a-ruby-gem/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -53,23 +53,57 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="home">
+      <div class="post">
 
-  <h1>Posts</h1>
+  <header class="post-header">
+    <h1>How do I creaet a ruby gem?</h1>
+    <p class="meta">Jun 21, 2014</p>
+  </header>
 
-  <ul class="posts">
-    
-      <li>
-        <span class="post-date">Jun 21, 2014</span>
-        <a class="post-link" href="/2014/06/21/how-do-i-create-a-ruby-gem/">How do I creaet a ruby gem?</a>
-      </li>
-    
-  </ul>
+  <article class="post-content">
+  <h1 id="background">Background</h1>
+<p>Last week, I pulled a file out of my lib directory of a project because I thought that we might try and use it in another project.  I really want to prevent a copy paste situation.  So this led me to think about, how did I do this 8 months ago?</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h2 id="before-you-start">0. Before You Start</h2>
+<ul>
+  <li>Create a RubyGems.org account</li>
+  <li>Make sure to query the name of your gem, to see if it already exists</li>
+</ul>
+
+<h2 id="gem-install-bundler--mou-iconhttpsavatars1githubusercontentcomu1137638s50">1. gem install bundler  <img src="https://avatars1.githubusercontent.com/u/1137638?s=50" alt="Mou icon" /></h2>
+<p>Bundler will do most of the heavy lifting.  Pick a name for your gem and run…</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">bundle</span> <span class="n">gem</span> <span class="n">my_gem</span></code></pre></div>
+
+<p>Now you should have a directory with your gem name and it contains all of the necessary file needed to start your gem.</p>
+
+<h2 id="build-time">2. Build Time</h2>
+<p>If you run ‘rake -T’ in the terminal, you will see…</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">rake</span> <span class="n">build</span>    <span class="c1"># Build my_gem-0.0.1.gem into the pkg directory</span>
+<span class="n">rake</span> <span class="n">install</span>  <span class="c1"># Build and install my_gem-0.0.1.gem into system gems</span>
+<span class="n">rake</span> <span class="n">release</span>  <span class="c1"># Create tag v0.0.1 and build and push my_gem-0.0.1.gem to Rubygems</span></code></pre></div>
+
+<p>Run these commands:</p>
+
+<ul>
+  <li>rake build #to build your gem</li>
+  <li>rake install #just to make sure your gem installs without issue</li>
+</ul>
+
+<h2 id="release-mygem">3. Release my_gem</h2>
+
+<p>When the gem is ready for release to RubyGems.org</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">rake</span> <span class="n">release</span></code></pre></div>
+
+<p>The first time you do this, you will be asked for your RubyGems.org credentials.</p>
+
+<h2 id="done">Done</h2>
+
+  </article>
 
 </div>
-
       </div>
     </div>
 
