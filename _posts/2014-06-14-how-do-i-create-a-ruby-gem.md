@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How do I creaet a ruby gem?"
+title:  "How do I create a ruby gem?"
 date:   2014-06-21
 ---
 
