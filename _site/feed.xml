@@ -7,6 +7,58 @@
     <atom:link href="http://JustinRolston.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>chruby</title>
+        <description>&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;I have been using RVM for installing and managing ruby.  Recently, I have been hearing about chruby and how it would make my terminal run a bit fast because it is a little less invasive than RVM.  I also like the simplicity of it all.&lt;/p&gt;
+
+&lt;h2 id=&quot;before-you-start&quot;&gt;0. Before You Start&lt;/h2&gt;
+
+&lt;p&gt;Remove current ruby version manager.  If you have RVM like I did, then run:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;rvm implode&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;ruby-install&quot;&gt;1. Ruby-Install&lt;/h2&gt;
+&lt;p&gt;Chruby dosen’t handle installing ruby but ruby-install does:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;install ruby-install&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;brew install ruby-install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;install any version of ruby&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ruby-install ruby 2.1.2 &lt;span class=&quot;c&quot;&gt;# or whatever version you need&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;setup-chruby&quot;&gt;2. Setup chruby&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Install chruby&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;brew&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chruby&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Config terminal by putting the below lines into your .profile or .bashrc file&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /usr/local/share/chruby/chruby.sh
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /usr/local/share/chruby/auto.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;set-default-version-of-ruby&quot;&gt;3. Set default version of ruby&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;ruby-2.1.2&amp;quot;&lt;/span&gt; &amp;gt; ~/.ruby-version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 19 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://JustinRolston.github.io/2014/07/19/chruby/</link>
+        <guid isPermaLink="true">http://JustinRolston.github.io/2014/07/19/chruby/</guid>
+      </item>
+    
+      <item>
         <title>How do I creaet a ruby gem?</title>
         <description>&lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt;
 &lt;p&gt;Last week, I pulled a file out of my lib directory of a project because I thought that we might try and use it in another project.  I really want to prevent a copy paste situation.  So this led me to think about, how did I do this 8 months ago?&lt;/p&gt;
