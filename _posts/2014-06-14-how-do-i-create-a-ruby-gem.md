@@ -4,7 +4,7 @@ title:  "How do I create a ruby gem?"
 date:   2014-06-21
 ---
 
-# Background
+## Background
 Last week, I pulled a file out of my lib directory of a project because I thought that we might try and use it in another project.  I really want to prevent a copy paste situation.  So this led me to think about, how did I do this 8 months ago?
 
 ## 0. Before You Start
