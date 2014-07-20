@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Justin's Notes</title>
+  <title>How Do I Create a Ruby Gem? - Justin's Notes</title>
   <meta name="author" content="Justin Rolston">
 
   
-  <meta name="description" content="Background I have been using RVM for installing and managing ruby. Recently, I have been hearing about chruby and how it would make my terminal run a &hellip;">
+  <meta name="description" content="Background Last week, I pulled a file out of my lib directory of a project because I thought that we might try and use it in another project. I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://justinrolston.github.io">
+  <link rel="canonical" href="http://justinrolston.github.io/blog/2014/06/21/how-do-i-create-a-ruby-gem">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Justin's Notes" type="application/atom+xml">
@@ -56,106 +56,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/07/19/chruby/">Chruby</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-19T15:40:09-04:00" pubdate data-updated="true">Jul 19<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Background</h2>
-
-<p>I have been using RVM for installing and managing ruby.  Recently, I have been hearing about chruby and how it would make my terminal run a bit fast because it is a little less invasive than RVM.  I also like the simplicity of it all.</p>
-
-<h2>0. Before You Start</h2>
-
-<p>Remove current ruby version manager.  If you have RVM like I did, then run:</p>
-
-<div class="highlight"><pre><code class="bash">rvm implode</code></pre></div>
-
-
-<h2>1. Ruby-Install</h2>
-
-<p>Chruby dosen&rsquo;t handle installing ruby but ruby-install does:</p>
-
-<ul>
-<li>install ruby-install</li>
-</ul>
-
-
-<div class="highlight"><pre><code class="bash">brew install ruby-install</code></pre></div>
-
-
-<ul>
-<li>install any version of ruby</li>
-</ul>
-
-
-<div class="highlight"><pre><code class="bash">ruby-install ruby 2.1.2 <span class="c"># or whatever version you need</span></code></pre></div>
-
-
-<h2>2. Setup chruby</h2>
-
-<ul>
-<li>Install chruby</li>
-</ul>
-
-
-<div class="highlight"><pre><code class="ruby"><span class="n">brew</span> <span class="n">install</span> <span class="n">chruby</span></code></pre></div>
-
-
-<ul>
-<li>Config terminal by putting the below lines into your .profile or .bashrc file</li>
-</ul>
-
-
-<div class="highlight"><pre><code class="bash"><span class="nb">source</span> /usr/local/share/chruby/chruby.sh
-<span class="nb">source</span> /usr/local/share/chruby/auto.sh</code></pre></div>
-
-
-<h2>3. Set default version of ruby</h2>
-
-<div class="highlight"><pre><code class="bash"><span class="nb">echo</span> <span class="s2">&quot;ruby-2.1.2&quot;</span> &gt; ~/.ruby-version</code></pre></div>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/06/21/how-do-i-create-a-ruby-gem/">How Do I Create a Ruby Gem?</a></h1>
+      <h1 class="entry-title">How Do I Create a Ruby Gem?</h1>
     
     
       <p class="meta">
@@ -178,7 +84,7 @@
   </header>
 
 
-  <div class="entry-content"><h2>Background</h2>
+<div class="entry-content"><h2>Background</h2>
 
 <p>Last week, I pulled a file out of my lib directory of a project because I thought that we might try and use it in another project.  I really want to prevent a copy paste situation.  So this led me to think about, how did I do this 8 months ago?</p>
 
@@ -227,19 +133,54 @@
 
 <h2>Done</h2>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Justin Rolston</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2014-06-21T15:40:09-04:00" pubdate data-updated="true">Jun 21<sup>st</sup>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://justinrolston.github.io/blog/2014/06/21/how-do-i-create-a-ruby-gem/" data-via="JustinRolston" data-counturl="http://justinrolston.github.io/blog/2014/06/21/how-do-i-create-a-ruby-gem/" >Tweet</a>
+  
+  
+  
 </div>
-<aside class="sidebar">
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/07/19/chruby/" title="Next Post: chruby">chruby &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+  <aside class="sidebar">
    
 <form action="https://www.google.com/search" method="get">
   <fieldset role="search">
@@ -267,7 +208,7 @@
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/JustinRolston">@JustinRolston</a> on GitHub
@@ -299,6 +240,7 @@
 
   
 </aside>
+
 
 
     </div>

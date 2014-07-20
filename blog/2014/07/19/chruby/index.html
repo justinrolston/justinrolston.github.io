@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Justin's Notes</title>
+  <title>Chruby - Justin's Notes</title>
   <meta name="author" content="Justin Rolston">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://justinrolston.github.io">
+  <link rel="canonical" href="http://justinrolston.github.io/blog/2014/07/19/chruby">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Justin's Notes" type="application/atom+xml">
@@ -56,15 +56,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/07/19/chruby/">Chruby</a></h1>
+      <h1 class="entry-title">Chruby</h1>
     
     
       <p class="meta">
@@ -87,7 +84,7 @@
   </header>
 
 
-  <div class="entry-content"><h2>Background</h2>
+<div class="entry-content"><h2>Background</h2>
 
 <p>I have been using RVM for installing and managing ruby.  Recently, I have been hearing about chruby and how it would make my terminal run a bit fast because it is a little less invasive than RVM.  I also like the simplicity of it all.</p>
 
@@ -144,22 +141,16 @@
 
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/06/21/how-do-i-create-a-ruby-gem/">How Do I Create a Ruby Gem?</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Justin Rolston</span></span>
+
+      
 
 
 
@@ -171,75 +162,33 @@
   
 
 
-<time datetime="2014-06-21T15:40:09-04:00" pubdate data-updated="true">Jun 21<sup>st</sup>, 2014</time>
-        
-      </p>
+<time datetime="2014-07-19T15:40:09-04:00" pubdate data-updated="true">Jul 19<sup>th</sup>, 2014</time>
+      
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><h2>Background</h2>
-
-<p>Last week, I pulled a file out of my lib directory of a project because I thought that we might try and use it in another project.  I really want to prevent a copy paste situation.  So this led me to think about, how did I do this 8 months ago?</p>
-
-<h2>0. Before You Start</h2>
-
-<ul>
-<li>Create a RubyGems.org account</li>
-<li>Make sure to query the name of your gem, to see if it already exists</li>
-</ul>
-
-
-<h2>1. gem install bundler  <img src="https://avatars1.githubusercontent.com/u/1137638?s=50" alt="Mou icon" /></h2>
-
-<p>Bundler will do most of the heavy lifting.  Pick a name for your gem and run&hellip;</p>
-
-<div class="highlight"><pre><code class="ruby"><span class="n">bundle</span> <span class="n">gem</span> <span class="n">my_gem</span></code></pre></div>
-
-
-<p>Now you should have a directory with your gem name and it contains all of the necessary file needed to start your gem.</p>
-
-<h2>2. Build Time</h2>
-
-<p>If you run &lsquo;rake -T&rsquo; in the terminal, you will see&hellip;</p>
-
-<div class="highlight"><pre><code class="ruby"><span class="n">rake</span> <span class="n">build</span>    <span class="c1"># Build my_gem-0.0.1.gem into the pkg directory</span>
-<span class="n">rake</span> <span class="n">install</span>  <span class="c1"># Build and install my_gem-0.0.1.gem into system gems</span>
-<span class="n">rake</span> <span class="n">release</span>  <span class="c1"># Create tag v0.0.1 and build and push my_gem-0.0.1.gem to Rubygems</span></code></pre></div>
-
-
-<p>Run these commands:</p>
-
-<ul>
-<li>rake build #to build your gem</li>
-<li>rake install #just to make sure your gem installs without issue</li>
-</ul>
-
-
-<h2>3. Release my_gem</h2>
-
-<p>When the gem is ready for release to RubyGems.org</p>
-
-<div class="highlight"><pre><code class="ruby"><span class="n">rake</span> <span class="n">release</span></code></pre></div>
-
-
-<p>The first time you do this, you will be asked for your RubyGems.org credentials.</p>
-
-<h2>Done</h2>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://justinrolston.github.io/blog/2014/07/19/chruby/" data-via="JustinRolston" data-counturl="http://justinrolston.github.io/blog/2014/07/19/chruby/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/06/21/how-do-i-create-a-ruby-gem/" title="Previous Post: How do I create a ruby gem?">&laquo; How do I create a ruby gem?</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
-<aside class="sidebar">
+
+  <aside class="sidebar">
    
 <form action="https://www.google.com/search" method="get">
   <fieldset role="search">
@@ -267,7 +216,7 @@
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/JustinRolston">@JustinRolston</a> on GitHub
@@ -299,6 +248,7 @@
 
   
 </aside>
+
 
 
     </div>

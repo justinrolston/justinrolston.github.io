@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Justin's Notes]]></title>
+  <link href="http://justinrolston.github.io/atom.xml" rel="self"/>
+  <link href="http://justinrolston.github.io/"/>
+  <updated>2014-07-20T15:53:21-04:00</updated>
+  <id>http://justinrolston.github.io/</id>
+  <author>
+    <name><![CDATA[Justin Rolston]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Chruby]]></title>
+    <link href="http://justinrolston.github.io/blog/2014/07/19/chruby/"/>
+    <updated>2014-07-19T15:40:09-04:00</updated>
+    <id>http://justinrolston.github.io/blog/2014/07/19/chruby</id>
+    <content type="html"><![CDATA[<h2>Background</h2>
+
+<p>I have been using RVM for installing and managing ruby.  Recently, I have been hearing about chruby and how it would make my terminal run a bit fast because it is a little less invasive than RVM.  I also like the simplicity of it all.</p>
+
+<h2>0. Before You Start</h2>
+
+<p>Remove current ruby version manager.  If you have RVM like I did, then run:</p>
+
+<div class="highlight"><pre><code class="bash">rvm implode</code></pre></div>
+
+
+<h2>1. Ruby-Install</h2>
+
+<p>Chruby dosen&rsquo;t handle installing ruby but ruby-install does:</p>
+
+<ul>
+<li>install ruby-install</li>
+</ul>
+
+
+<div class="highlight"><pre><code class="bash">brew install ruby-install</code></pre></div>
+
+
+<ul>
+<li>install any version of ruby</li>
+</ul>
+
+
+<div class="highlight"><pre><code class="bash">ruby-install ruby 2.1.2 <span class="c"># or whatever version you need</span></code></pre></div>
+
+
+<h2>2. Setup chruby</h2>
+
+<ul>
+<li>Install chruby</li>
+</ul>
+
+
+<div class="highlight"><pre><code class="ruby"><span class="n">brew</span> <span class="n">install</span> <span class="n">chruby</span></code></pre></div>
+
+
+<ul>
+<li>Config terminal by putting the below lines into your .profile or .bashrc file</li>
+</ul>
+
+
+<div class="highlight"><pre><code class="bash"><span class="nb">source</span> /usr/local/share/chruby/chruby.sh
+<span class="nb">source</span> /usr/local/share/chruby/auto.sh</code></pre></div>
+
+
+<h2>3. Set default version of ruby</h2>
+
+<div class="highlight"><pre><code class="bash"><span class="nb">echo</span> <span class="s2">&quot;ruby-2.1.2&quot;</span> &gt; ~/.ruby-version</code></pre></div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How Do I Create a Ruby Gem?]]></title>
+    <link href="http://justinrolston.github.io/blog/2014/06/21/how-do-i-create-a-ruby-gem/"/>
+    <updated>2014-06-21T15:40:09-04:00</updated>
+    <id>http://justinrolston.github.io/blog/2014/06/21/how-do-i-create-a-ruby-gem</id>
+    <content type="html"><![CDATA[<h2>Background</h2>
+
+<p>Last week, I pulled a file out of my lib directory of a project because I thought that we might try and use it in another project.  I really want to prevent a copy paste situation.  So this led me to think about, how did I do this 8 months ago?</p>
+
+<h2>0. Before You Start</h2>
+
+<ul>
+<li>Create a RubyGems.org account</li>
+<li>Make sure to query the name of your gem, to see if it already exists</li>
+</ul>
+
+
+<h2>1. gem install bundler  <img src="https://avatars1.githubusercontent.com/u/1137638?s=50" alt="Mou icon" /></h2>
+
+<p>Bundler will do most of the heavy lifting.  Pick a name for your gem and run&hellip;</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">bundle</span> <span class="n">gem</span> <span class="n">my_gem</span></code></pre></div>
+
+
+<p>Now you should have a directory with your gem name and it contains all of the necessary file needed to start your gem.</p>
+
+<h2>2. Build Time</h2>
+
+<p>If you run &lsquo;rake -T&rsquo; in the terminal, you will see&hellip;</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">rake</span> <span class="n">build</span>    <span class="c1"># Build my_gem-0.0.1.gem into the pkg directory</span>
+<span class="n">rake</span> <span class="n">install</span>  <span class="c1"># Build and install my_gem-0.0.1.gem into system gems</span>
+<span class="n">rake</span> <span class="n">release</span>  <span class="c1"># Create tag v0.0.1 and build and push my_gem-0.0.1.gem to Rubygems</span></code></pre></div>
+
+
+<p>Run these commands:</p>
+
+<ul>
+<li>rake build #to build your gem</li>
+<li>rake install #just to make sure your gem installs without issue</li>
+</ul>
+
+
+<h2>3. Release my_gem</h2>
+
+<p>When the gem is ready for release to RubyGems.org</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">rake</span> <span class="n">release</span></code></pre></div>
+
+
+<p>The first time you do this, you will be asked for your RubyGems.org credentials.</p>
+
+<h2>Done</h2>
+]]></content>
+  </entry>
+  
+</feed>
