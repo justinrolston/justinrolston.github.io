@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "How do I create a ruby gem?"
-date:   2014-06-21
+date: 2014-06-21 15:40:09 -0400
+comments: true
+
 ---
 
 ## Background
